@@ -1,10 +1,8 @@
 var VideoList = (props) => (
   <div className="video-list">
-    <ul>
-      {props.videos.map(video => 
-        <VideoListEntry video={video} title={video.snippet.title} description={video.snippet.description}/>
-      )}
-    </ul>
+    {props.videos.map(video => 
+      <VideoListEntry video={video} title={video.snippet.title} description={video.snippet.description} url={video.snippet.thumbnails.default.url} />
+    )}
   </div>
 );
 

@@ -4,6 +4,8 @@ class App extends React.Component {
     this.state = {
       videos: window.exampleVideoData,
       video: window.exampleVideoData[0]
+      //replace above by calling search(options, afterSearchState)
+      //this.prop.search({query: 'pug goes to petsmart', max: 5, key: window.YOUTUBE_API_KEY}, afterSearchState);
     };
 
     //defining a function that occurs on a click
@@ -31,6 +33,11 @@ class App extends React.Component {
   
   entryTitleClick(videoObj) {
     this.setState({ video : videoObj});
+  }
+
+
+  afterSearchState(collection) {
+    this.setState({videos: collection, video: collection[0]});
   }
   
 }

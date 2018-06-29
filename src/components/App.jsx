@@ -1,6 +1,6 @@
 class App extends React.Component {
-  constructor() {
-    super();
+  constructor(prop) {
+    super(prop);
     this.state = {
       videos: window.exampleVideoData,
       video: window.exampleVideoData[0]
@@ -10,7 +10,7 @@ class App extends React.Component {
   }
 
   render() {
-     return(
+    return(
       <div>
         <nav className="navbar">
           <div className="col-md-6 offset-md-3">
@@ -30,7 +30,7 @@ class App extends React.Component {
   }
   
   entryTitleClick(videoObj) {
-    this.setState({video : videoObj});
+    this.setState({ video : videoObj});
   }
   
 }
